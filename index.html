@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Najiya K | Full Stack & Python Django Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            navybg: '#060c17',
+            cardbg: '#0b1424',
+            cardborder: '#16243b',
+            emeraldaccent: '#10b981',
+            emeraldhover: '#059669',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #060c17;
+      color: #f8fafc;
+    }
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #111827 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      #resumeModal {
+        position: static !important;
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      #resumeModal > div {
+        box-shadow: none !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-40 bg-navybg/90 backdrop-blur-md border-b border-slate-800/70 no-print">
+    <div class="max-w-3xl mx-auto px-5 h-14 flex items-center justify-between">
+      <a href="#" class="text-sm font-bold tracking-tight text-white">Najiya K</a>
+      <nav class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-emerald-400 transition">About</a>
+        <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+        <a href="#resume" class="hover:text-emerald-400 transition">Resume</a>
+        <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-xl mx-auto px-5 pt-10 pb-20 space-y-20">
+
+    <!-- Hero & About Section -->
+    <section id="about" class="space-y-6">
+      <div class="flex flex-col items-start gap-4">
+        <div class="relative group">
+          <div class="w-36 h-36 rounded-full overflow-hidden border-2 border-emerald-500/50 bg-cardbg flex items-center justify-center shadow-xl">
+            <img id="profilePhoto" src="" alt="Najiya K" class="hidden w-full h-full object-cover" />
+            <div id="photoPlaceholder" class="flex flex-col items-center justify-center text-center p-3">
+              <span class="text-3xl font-extrabold text-emerald-400 tracking-tight">NK</span>
+              <span class="text-[11px] text-slate-400 mt-1">Najiya K</span>
+            </div>
+          </div>
+          <label for="photoInput" class="no-print mt-2 inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 cursor-pointer font-medium">
+            <span>+ Add / Preview Photo</span>
+          </label>
+          <input id="photoInput" type="file" accept="image/*" class="hidden" />
+        </div>
+
+        <div class="space-y-2 pt-1">
+          <p class="text-emerald-400 font-semibold text-base">Hello, I'm</p>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Najiya K,
+          </h1>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-emerald-400 leading-tight">
+            Full Stack &amp; Python Django Developer
+          </h2>
+        </div>
+
+        <p class="text-slate-300 text-base leading-relaxed">
+          Computer Engineering diploma graduate from IPT &amp; GPTC Shoranur (2025) with training from G-Tech Pattambi and internship experience at Nilantra Pattambi. Skilled in HTML, CSS, JavaScript, Bootstrap, Python, Django, and MySQL, building practical and user-friendly web applications.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-3 pt-2 no-print">
+          <a href="#projects" class="px-5 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-semibold text-sm transition shadow-lg shadow-emerald-500/15">
+            View Projects
+          </a>
+          <button type="button" onclick="openResumeModal()" class="px-5 py-2.5 rounded-lg bg-cardbg hover:bg-slate-800 text-white border border-cardborder font-semibold text-sm transition">
+            Resume
+          </button>
+          <a href="https://github.com/najiyanazar245" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-lg bg-cardbg hover:bg-slate-800 text-emerald-400 border border-cardborder font-semibold text-sm transition">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="space-y-6">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Skills</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-cardbg border border-cardborder rounded-xl p-6 text-center space-y-1.5">
+          <h3 class="text-lg font-bold text-emerald-400">HTML5, CSS3 &amp; Bootstrap</h3>
+          <p class="text-sm text-slate-400">Responsive Web Design &amp; UI</p>
+        </div>
+
+        <div class="bg-cardbg border border-cardborder rounded-xl p-6 text-center space-y-1.5">
+          <h3 class="text-lg font-bold text-emerald-400">JavaScript &amp; jQuery</h3>
+          <p class="text-sm text-slate-400">Interactive Frontend Logic</p>
+        </div>
+
+        <div class="bg-cardbg border border-cardborder rounded-xl p-6 text-center space-y-1.5">
+          <h3 class="text-lg font-bold text-emerald-400">Python &amp; Django</h3>
+          <p class="text-sm text-slate-400">Backend &amp; Full-Stack Apps</p>
+        </div>
+
+        <div class="bg-cardbg border border-cardborder rounded-xl p-6 text-center space-y-1.5">
+          <h3 class="text-lg font-bold text-emerald-400">MySQL &amp; GitHub</h3>
+          <p class="text-sm text-slate-400">Database &amp; Version Control</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI-Assisted Development Section -->
+    <section id="ai-tools" class="space-y-6">
+      <div class="text-center space-y-2.5">
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">AI-Assisted Development</h2>
+        <p class="text-sm text-slate-400 leading-relaxed max-w-md mx-auto">
+          I use modern AI tools to speed up development, prototype clean layouts, and debug code while reviewing and testing every feature myself.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-cardbg border border-cardborder rounded-xl p-6 space-y-2">
+          <div class="text-emerald-400 text-lg font-bold">✦</div>
+          <h3 class="text-xl font-bold text-white">Google Stitch &amp; UI Prototyping</h3>
+          <p class="text-xs font-semibold text-emerald-400">Layout Exploration &amp; Interface Design</p>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Used to explore clean UI layouts, color palettes, and responsive screen structures for modern web applications.
+          </p>
+        </div>
+
+        <div class="bg-cardbg border border-cardborder rounded-xl p-6 space-y-2">
+          <div class="text-emerald-400 text-lg font-bold font-mono">&lt;/&gt;</div>
+          <h3 class="text-xl font-bold text-white">AI Coding &amp; Debugging Assistant</h3>
+          <p class="text-xs font-semibold text-emerald-400">Code Review, Refactoring &amp; Problem Solving</p>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Used to assist with writing boilerplate code, resolving bugs faster, and refining database queries and views.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="space-y-6">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Featured Projects</h2>
+      </div>
+
+      <div class="space-y-5">
+        <!-- Project 1: Supermarket Project -->
+        <article class="bg-cardbg border border-cardborder rounded-xl p-6 space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-xl font-bold text-emerald-400">Supermarket Management &amp; E-Commerce System</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              A web-based supermarket management and shopping system built to handle product inventory, billing, stock tracking, and customer ordering workflows efficiently.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300">Python &amp; Django</span>
+            <span class="px-3 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300">MySQL</span>
+            <span class="px-3 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300">HTML, CSS &amp; JS</span>
+          </div>
+          <div class="pt-1">
+            <a href="https://github.com/najiyanazar245/supermarket_project" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition">
+              GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Student Fee Management -->
+        <article class="bg-cardbg border border-cardborder rounded-xl p-6 space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-xl font-bold text-emerald-400">Student Fee Management System</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              A structured management application for maintaining student records, course details, fee payments, receipts, and pending balance tracking.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300">Python &amp; Django</span>
+            <span class="px-3 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300">MySQL</span>
+            <span class="px-3 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300">HTML, CSS &amp; Bootstrap</span>
+          </div>
+          <div class="pt-1">
+            <a href="https://github.com/najiyanazar245" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition">
+              GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Fancy Shop Project -->
+        <article class="bg-cardbg border border-cardborder rounded-xl p-6 space-y-4">
+          <div class="space-y-2">
+            <h3 class="text-xl font-bold text-emerald-400">Fancy Shop Management &amp; Shopping Website</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              A retail and shopping web application designed for managing fancy store categories, product listings, inventory updates, and customer browsing.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300">HTML &amp; CSS</span>
+            <span class="px-3 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300">JavaScript</span>
+            <span class="px-3 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300">Python &amp; MySQL</span>
+          </div>
+          <div class="pt-1">
+            <a href="https://github.com/najiyanazar245" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition">
+              GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="space-y-5">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Resume</h2>
+      </div>
+
+      <div class="bg-cardbg border border-cardborder rounded-xl p-6 space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-b border-slate-800 pb-4">
+          <div>
+            <h3 class="text-lg font-bold text-white">Najiya K — Curriculum Vitae</h3>
+            <p class="text-xs text-slate-400">IPT &amp; GPTC Shoranur (2025) • G-Tech Pattambi • Nilantra Pattambi</p>
+          </div>
+          <button type="button" onclick="openResumeModal()" class="no-print px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-semibold text-xs sm:text-sm transition self-start sm:self-auto">
+            View Full Resume
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div class="space-y-1">
+            <p class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Education</p>
+            <p class="font-semibold text-white">Diploma in Computer Engineering (2025)</p>
+            <p class="text-xs text-slate-400">IPT &amp; GPTC Shoranur</p>
+            <p class="font-semibold text-white pt-1">Web Development Training</p>
+            <p class="text-xs text-slate-400">G-Tech Computer Education, Pattambi</p>
+          </div>
+
+          <div class="space-y-1">
+            <p class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Internship &amp; Languages</p>
+            <p class="font-semibold text-white">Web Development Internship</p>
+            <p class="text-xs text-slate-400">Nilantra, Pattambi</p>
+            <p class="text-xs font-semibold text-emerald-400 pt-2">Languages</p>
+            <p class="text-xs text-slate-300">Malayalam, English, Arabic</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-center space-y-5 pt-2">
+      <h2 class="text-3xl font-extrabold text-white tracking-tight">Let's Connect</h2>
+      <p class="text-sm text-slate-400 leading-relaxed max-w-md mx-auto">
+        I'm currently looking for Full-Stack / Python Django web developer opportunities around Pattambi, Perinthalmanna, and nearby areas. Feel free to reach out!
+      </p>
+
+      <div class="flex items-center justify-center gap-3 pt-1 no-print">
+        <a href="mailto:najiyasalih370@gmail.com" class="px-6 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-semibold text-sm transition shadow-lg shadow-emerald-500/15">
+          Email Me
+        </a>
+        <a href="https://github.com/najiyanazar245" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-lg bg-cardbg hover:bg-slate-800 text-white border border-cardborder font-semibold text-sm transition">
+          GitHub
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-8 px-5 text-center space-y-2 no-print">
+    <p class="text-xs text-slate-500">© 2026 Najiya K. All rights reserved.</p>
+    <p class="text-xs text-slate-600">Pattambi, Kerala • najiyasalih370@gmail.com • +91 8089575838</p>
+  </footer>
+
+  <!-- Interactive Resume Modal -->
+  <div id="resumeModal" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white text-slate-900 w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden my-auto max-h-[90vh] flex flex-col">
+      <div class="flex items-center justify-between px-6 py-4 bg-slate-900 text-white no-print">
+        <span class="font-bold text-sm">Resume — Najiya K</span>
+        <div class="flex items-center gap-2">
+          <button type="button" onclick="window.print()" class="px-3 py-1.5 rounded bg-emerald-500 hover:bg-emerald-600 text-slate-950 text-xs font-semibold transition">
+            Print / Save PDF
+          </button>
+          <button type="button" onclick="closeResumeModal()" class="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition">
+            Close
+          </button>
+        </div>
+      </div>
+
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 text-sm">
+        <div class="border-b-2 border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+          <div>
+            <h3 class="text-2xl font-extrabold text-slate-900 tracking-wide">NAJIYA K</h3>
+            <p class="text-emerald-700 font-semibold">Full Stack &amp; Python Django Web Developer</p>
+          </div>
+          <div class="text-xs text-slate-600 space-y-0.5 sm:text-right">
+            <p>Pattambi, Kerala</p>
+            <p>najiyasalih370@gmail.com | +91 8089575838</p>
+            <p>github.com/najiyanazar245</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-1 mb-2">Summary</h4>
+          <p class="text-slate-700 leading-relaxed">
+            Computer Engineering diploma graduate from IPT &amp; GPTC Shoranur (2025) with web development training from G-Tech Pattambi and internship experience at Nilantra Pattambi. Experienced in building web applications using HTML, CSS, JavaScript, Bootstrap, Python, Django, and MySQL.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div class="sm:col-span-2 space-y-4">
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-1 mb-2">Experience &amp; Training</h4>
+              <div class="space-y-2.5">
+                <div>
+                  <p class="font-bold text-slate-900">Web Development Intern — Nilantra, Pattambi</p>
+                  <p class="text-xs text-slate-600">Worked on web development tasks, UI structuring, and application workflows.</p>
+                </div>
+                <div>
+                  <p class="font-bold text-slate-900">Web Development Course — G-Tech Computer Education, Pattambi</p>
+                  <p class="text-xs text-slate-600">Trained in frontend and backend web development including Python, Django, and MySQL.</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-1 mb-2">Education</h4>
+              <div>
+                <p class="font-bold text-slate-900">Diploma in Computer Engineering — IPT &amp; GPTC Shoranur (2025)</p>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-1 mb-2">Projects</h4>
+              <ul class="list-disc list-inside space-y-1.5 text-xs text-slate-700">
+                <li><span class="font-semibold text-slate-900">Supermarket Management Project</span> — github.com/najiyanazar245/supermarket_project</li>
+                <li><span class="font-semibold text-slate-900">Student Fee Management System</span> — Student fee records &amp; payment tracking</li>
+                <li><span class="font-semibold text-slate-900">Fancy Shop Project</span> — Retail product &amp; order management web app</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="space-y-4 bg-slate-50 p-4 rounded-lg border border-slate-200">
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-1 mb-2">Skills</h4>
+              <ul class="text-xs text-slate-700 space-y-1">
+                <li>• HTML5, CSS3, Bootstrap</li>
+                <li>• JavaScript, jQuery</li>
+                <li>• Python, Django</li>
+                <li>• MySQL</li>
+                <li>• Git &amp; GitHub</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-200 pb-1 mb-2">Languages</h4>
+              <ul class="text-xs text-slate-700 space-y-1">
+                <li>• Malayalam</li>
+                <li>• English</li>
+                <li>• Arabic</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const photoInput = document.getElementById('photoInput');
+    const profilePhoto = document.getElementById('profilePhoto');
+    const photoPlaceholder = document.getElementById('photoPlaceholder');
+
+    photoInput.addEventListener('change', (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        profilePhoto.src = reader.result;
+        profilePhoto.classList.remove('hidden');
+        photoPlaceholder.classList.add('hidden');
+      };
+      reader.readAsDataURL(file);
+    });
+
+    const resumeModal = document.getElementById('resumeModal');
+    function openResumeModal() {
+      resumeModal.classList.remove('hidden');
+      resumeModal.classList.add('flex');
+    }
+    function closeResumeModal() {
+      resumeModal.classList.add('hidden');
+      resumeModal.classList.remove('flex');
+    }
+    resumeModal.addEventListener('click', (e) => {
+      if (e.target === resumeModal) closeResumeModal();
+    });
+  </script>
+</body>
+</html>
